@@ -1,0 +1,30 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<div class="frame">
+	<div class="center">
+		<div class="title">
+			<h1>Upload Images</h1>
+		</div>
+
+		
+			<img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
+
+			
+			<form class="form-data" method = "post" enctype="multipart/form-data"> 
+        {% csrf_token %} 
+        {{ form.as_p }} 
+        <button type="submit" class="btn">Upload</button>
+         
+    </form> 
+		</div>
+
+		
+
+		
+
+	</div>
+</div>
+<!-- original pen: https://codepen.io/roydigerhund/pen/ZQdbeN  -->
+
+<!-- NO JS ADDED YET -->
