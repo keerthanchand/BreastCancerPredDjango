@@ -63,7 +63,11 @@
 
         <h1>Result</h1> 
         <p>predicted Result<br/> {{ result }}</p>
-        <BUTTON class="btn pure-button">Home</BUTTON>
+        {% csrf_token %}
+        <a href="{% url 'index' %}"><button class="btn pure-button">Go Back</button></a>
+        
+
+
       </div>
     </body>
 </html>

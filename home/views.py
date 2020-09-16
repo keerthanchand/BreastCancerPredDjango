@@ -39,6 +39,8 @@ def index(request):
   
   
 def success(request):
+	if request.method == 'POST':
+		return redirect('index')
 	folder = './media/images'
 	image_file = os.listdir(folder)[0].split('.')[0]
 	result = getfile(image_file)
